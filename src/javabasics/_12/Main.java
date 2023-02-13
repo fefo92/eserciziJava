@@ -31,14 +31,17 @@ public class Main {
 
         // Start your code here
         if (text.length() > 20) {
-            yourScore = yourScore + 20;
-        } else if (text.contains("a")) {
-            yourScore = yourScore - 5;
-        } else if (text.equals(text.toLowerCase())) {
+            yourScore += 20;
+        } else {
+            yourScore = text.length();
+        }
+        if (text.equals(text.toLowerCase())) {
             yourScore = yourScore + 10;
         }
-
-        if (yourScore > 20) {
+        if (text.contains("a")) {
+            yourScore = yourScore - 5;
+        }
+        if (yourScore >= 20) {
             yourScore = yourScore * 2;
         }
         // End it here
@@ -68,11 +71,9 @@ public class Main {
         switch (mealType) {
             case "sandwich" -> yourMealScore = 5 * weight;
             case "soup" -> yourMealScore = 3 * weight;
-            default -> {
-                if (yourMealScore < 5) {
-                    yourMealScore += 5;
-                }
-            }
+        }
+        if (yourMealScore < 5) {
+            yourMealScore = 5;
         }
         // End it here
 
