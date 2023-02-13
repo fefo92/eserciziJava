@@ -77,8 +77,10 @@ public class Main {
         System.out.println("Exercise 4:");
         String startStr = "5";
         // Write your code here
-        int number = (Integer.valueOf(startStr) * 2); //passaggio 4.1, 4.2
-        String convertedNumber = (String.valueOf(number)); //passaggio 4.3
-        System.out.println(number + convertedNumber); //passaggio 4.3, e mi sono bloccato
+        int number = (Integer.valueOf(startStr) * 2);
+        String convertedNumber = String.valueOf(number);
+        String concatenatedNumber = number + convertedNumber;
+        double numberToDouble = Double.valueOf(concatenatedNumber) / 3.5;
+        System.out.println(Math.floor(numberToDouble));
     }
 }

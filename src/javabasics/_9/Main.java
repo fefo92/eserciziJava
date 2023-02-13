@@ -14,7 +14,7 @@ public class Main {
      */
     private static void exercise1() {
         System.out.println("\nExercise 1:");
-        int porridgeHeatInCentigrade = 100; // <--- Change this value
+        int porridgeHeatInCentigrade = 60; // <--- Change this value
 
         if (porridgeHeatInCentigrade < 60) {
             System.out.println("Too cold!");
