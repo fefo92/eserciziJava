@@ -2,6 +2,7 @@ package javabasics._13;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,19 +25,15 @@ public class Main {
         ArrayList<Integer> numbers = new ArrayList<>();
 
         //Write your code here
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
-        numbers.add(5);
-        numbers.add(6);
-        numbers.add(7);
-        numbers.add(8);
+        Random random = new Random();
+        for (int i = 0; i < 8; i++) {
+            int casualNumber = random.nextInt(100);
+            numbers.add(casualNumber);
+        }
         System.out.println(numbers.get(0));
         numbers.remove(0);
         numbers.remove(0);
         numbers.remove(0);
-//        System.out.println(numbers);
         System.out.println(numbers.get(1));
         System.out.println(numbers.get(2));
         System.out.println(numbers.get(3));
