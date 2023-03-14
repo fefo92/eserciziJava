@@ -42,7 +42,7 @@ public class Exercises {
             Files.readString(Path.of(userInputFileName));
         } catch (Exception Exception) {
             Exception.printStackTrace();
-            System.err.println("File could not be found: " + userInputFileName);
+            System.out.println("File could not be found: " + userInputFileName);
         }
     }
     /**
@@ -59,7 +59,7 @@ public class Exercises {
             Integer.parseInt("house");
         } catch (Exception Exception) {
             Exception.printStackTrace();
-            System.err.println("The input was not a valid integer");
+            System.out.println("The input was not a valid integer");
         }
     }
     /**
@@ -74,11 +74,15 @@ public class Exercises {
     private static void exercise4() {
         System.out.println("\nExercise 4: ");
         // Your code here
-        double num1 = 10.0;
+        int num1 = 10;
         String num2AsString = "0.0";
         try {
-            System.out.println(num1 / Double.parseDouble(num2AsString));
-        } catch (Exception Exception) {
+            System.out.println(num1 / Integer.parseInt(num2AsString));
+        } catch (ArithmeticException Exception) {
+            System.out.println("You can't divide by zero");
+            Exception.printStackTrace();
+        } catch (NumberFormatException Exception) {
+            System.out.println("Enter a valid integer");
             Exception.printStackTrace();
         }
     }
