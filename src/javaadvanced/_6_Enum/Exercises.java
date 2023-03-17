@@ -1,13 +1,12 @@
 package javaadvanced._6_Enum;
 
-import java.time.DayOfWeek;
-
 public class Exercises {
     public static void main(String[] args) {
         exercise1();
         exercise2();
         exercise3();
         exercise4();
+        exercise5();
     }
 
     private enum YouCanUseClassLocalEnumsLikeThis {
@@ -21,18 +20,6 @@ public class Exercises {
      * <p>
      * Loop over the values with Days.values() and print them out.
      */
-    private enum Days {
-        MONDAY(false), TUESDAY(false), WEDNESDAY(false), THURSDAY(false),
-        FRIDAY(false), SATURDAY(true), SUNDAY(true);
-
-
-        private final boolean isWeekend;
-
-        Days(boolean isWeekend) {
-            this.isWeekend = isWeekend;
-        }
-    }
-
     private static void exercise1() {
         System.out.println("\nExercise 1: ");
         // Your code here
@@ -41,17 +28,14 @@ public class Exercises {
             System.out.println(days);
         }
     }
+
     /**
      * 2:
      * Create an enum called "Seasons" with the values "SPRING", "SUMMER", "FALL", "WINTER".
      * <p>
      * Write a method that takes a Seasons value as input and returns the corresponding date range of months in that season.
      */
-    private enum Seasons {
-        SPRING, SUMMER, FALL, WINTER
-    }
-
-    private static void exercise2() {
+        private static void exercise2() {
         System.out.println("\nExercise 2: ");
         // Your code here
         Seasons seasons = Seasons.SUMMER;
@@ -70,9 +54,6 @@ public class Exercises {
      * <p>
      * Write code that simulates the behavior of a traffic light. It should take the current state of the traffic light as input and return the next state.
      */
-    private enum TrafficLight {
-        RED, YELLOW, GREEN
-    }
 
     private static void exercise3() {
         System.out.println("\nExercise 3: ");
@@ -119,6 +100,12 @@ public class Exercises {
 
         double num1 = 5;
         double num2 = 2;
+
+        System.out.println(Operator.calculate(num1, num2, Operator.ADD));
+        System.out.println(Operator.calculate(num1, num2, Operator.SUBTRACT));
+        System.out.println(Operator.calculate(num1, num2, Operator.MULTIPLY));
+        System.out.println(Operator.calculate(num1, num2, Operator.DIVIDE));
     }
+
 
 }
