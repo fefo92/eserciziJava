@@ -86,16 +86,16 @@ public class Exercises {
     private static void exercise3() {
         // 3a. Find the min and max values in the Set below
         Set<Integer> numbers = Set.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        int max = Integer.MAX_VALUE;
-        int min = Integer.MIN_VALUE;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
 
 
         for (Integer number : numbers) {
             // Your code
-            if (number < max) {
+            if (number > max) {
                 max = number;
             }
-            if (number > min) {
+            if (number < min) {
                 min = number;
             }
         }
